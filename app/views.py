@@ -41,7 +41,7 @@ def upload():
         flash('File Saved', 'success')
         return redirect(url_for('upload')) # Update this to redirect the user to a route that displays all uploaded image files
 
-    return render_template('upload.html')
+    return render_template('upload.html', form=form)
 
 
 @app.route('/login', methods=['POST', 'GET'])
@@ -65,7 +65,7 @@ def login():
         password=form.password.data
 
         user = UserProfile.query.filter_by(username=username).first()
-        if not (user and check_password_hash(user.password_hash, password)):
+        if not (user and check_password_hash(user.password, password)):
             flash('Invaild username or password')
             return redirect(url_for('login'))
         
