@@ -18,7 +18,7 @@ def get_uploaded_images():
     image_files = []
     for subdir, dirs, files in os.walk(rootdir):
         for file in files:
-            if file.endswith(('.jpg', '.png')):
+            if file.endswith(('.jpg', '.png','.jpeg')):
                 image_files.append(file)
     return image_files
 

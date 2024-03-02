@@ -18,3 +18,34 @@ body {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
+
+/* Style for the list of images */
+.image-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Style for each image item */
+.image-list li {
+    margin: 10px;
+    width: calc(33.33% - 20px);
+    text-align: center;
+}
+
+/* Style for the images */
+.image-list li img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Hover effect for images */
+.image-list li img:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
